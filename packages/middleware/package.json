@@ -1,0 +1,29 @@
+{
+  "name": "@iconfont-system/middleware",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "TuiMao233 <wwu710632@gmail.com>",
+  "homepage": "https://github.com/TuiMao233/iconfont-system#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuiMao233/iconfont-system.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/TuiMao233/iconfont-system/issues"
+  }
+}

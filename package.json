@@ -1,0 +1,12 @@
+{
+  "name": "iconfont-system",
+  "version": "1.0.0",
+  "private": "true",
+  "main": "index.js",
+  "repository": "https://github.com/TuiMao233/iconfont-system.git",
+  "author": "TuiMao233 <wwu710632@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
