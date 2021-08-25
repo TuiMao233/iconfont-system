@@ -1,22 +1,23 @@
 {
   "name": "@iconfont-system/system",
-  "version": "0.0.0",
-  "description": "> TODO: description",
-  "author": "TuiMao233 <wwu710632@gmail.com>",
-  "homepage": "https://github.com/TuiMao233/iconfont-system#readme",
-  "license": "ISC",
+  "version": "1.0.0",
   "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TuiMao233/iconfont-system.git"
-  },
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
-  "bugs": {
-    "url": "https://github.com/TuiMao233/iconfont-system/issues"
+  "dependencies": {
+    "execa": "^5.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vitejs/plugin-vue-jsx": "^1.1.7",
+    "@vue/compiler-sfc": "^3.2.6",
+    "vite": "^2.4.4",
+    "vue": "^3.2.6",
+    "vue-tsc": "^0.3.0",
+    "vuex": "^4.0.2"
   }
 }
