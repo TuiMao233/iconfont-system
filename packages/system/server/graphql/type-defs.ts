@@ -7,9 +7,44 @@ export const typeDefs = Object.values({
     }
   `,
   fonts: gql`
-    # test boo data
+    type FontItem {
+      id: ID!
+      key: String!
+      value: String!
+      group: ID!
+      createTime: Float!
+      updateTime: Float!
+    }
+    input SearchInput {
+      key: String
+      groups: [ID!]
+    }
+    input PaginationInput {
+      search: SearchInput
+      limit: Int
+      page: Int
+    }
+    type PaginationFonts {
+      total: Int!
+      lastPage: Int!
+      list: [FontItem!]
+    }
     type Query {
-      boo: String
+      fonts(options: PaginationInput): PaginationFonts
+    }
+    input UpdateFontInput {
+      key: String
+      value: String
+      group: ID
+    }
+    input CreateFontInput {
+      key: String!
+      value: String!
+      group: ID!
+    }
+    type Mutation {
+      updateFont(id: ID!, font: UpdateFontInput!): FontItem
+      createFont(font: CreateFontInput!): FontItem
     }
   `
 })
