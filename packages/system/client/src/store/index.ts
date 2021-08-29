@@ -1,16 +1,12 @@
-import { createStore } from 'vuex'
+import { App, inject, InjectionKey } from 'vue'
+import _store from './store'
 
-declare module 'vuex' {
-  export function useStore<S = typeof store.state>(): Store<S>
+export const STORE_KEY: InjectionKey<typeof _store> = Symbol('state')
+
+export const useStore = () => inject(STORE_KEY)!
+
+const install = (app: App) => {
+  app.provide(STORE_KEY, _store)
 }
 
-const store = createStore({
-  state: {
-    groups: []
-  },
-  mutations: {},
-  actions: {},
-  getters: {}
-})
-
-export default store
+export default Object.assign(_store, { install })
