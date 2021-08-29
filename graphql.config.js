@@ -1,4 +1,5 @@
 // graphql.config.js
+
 module.exports = {
   projects: {
     system: {

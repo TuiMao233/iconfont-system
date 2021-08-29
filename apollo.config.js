@@ -1,3 +1,5 @@
+// apollo.config.js
+
 module.exports = {
   client: {
     service: {
