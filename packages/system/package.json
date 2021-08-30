@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:server && yarn build:client",
     "dev:client": "vite",
-    "build:client": "vite build",
     "dev:server": "nodemon --ignore client --exec esno server/index.ts",
+    "build": "yarn build:server && yarn build:client",
+    "build:client": "vite build",
     "build:server": "cd server && tsc"
   },
   "dependencies": {
