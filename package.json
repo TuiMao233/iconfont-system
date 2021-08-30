@@ -1,6 +1,9 @@
 {
   "name": "iconfont-system",
   "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "private": "true",
   "main": "index.js",
   "repository": "https://github.com/TuiMao233/iconfont-system.git",
