@@ -23,6 +23,12 @@ export const resolvers = Object.values<IResolvers>({
       createFont: async (parent, { font }) => {
         if (!font) throw new UserInputError(`font 输入错误 -> '${font}'`)
         return await dataSources.font.createFont(font)
+      },
+      deleteFont: async (parent, { id }) => {
+        return dataSources.font.deleteFont(id)
+      },
+      deleteFonts: async (parent, { ids }) => {
+        return dataSources.font.deleteFont(ids)
       }
     }
   }

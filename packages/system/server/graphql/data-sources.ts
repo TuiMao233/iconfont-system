@@ -28,10 +28,12 @@ class MongoFont implements FontSources {
     return await FontModel.create(fontItem)
   }
   async deleteFont(id: string) {
-    return await FontModel.deleteOne({ id })
+    await FontModel.deleteOne({ id })
+    return { message: '删除字体成功!', status: true }
   }
   async deleteFonts(ids: string[]) {
-    return await FontModel.remove({ id: { $in: ids } })
+    await FontModel.remove({ id: { $in: ids } })
+    return { message: '删除字体成功!', status: true }
   }
 }
 class MongoGroup implements GroupSources {}

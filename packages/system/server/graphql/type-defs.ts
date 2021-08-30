@@ -42,9 +42,15 @@ export const typeDefs = Object.values({
       value: String!
       group: ID!
     }
+    type Success {
+      message: String!
+      status: Boolean
+    }
     type Mutation {
       updateFont(id: ID!, font: UpdateFontInput!): FontItem
       createFont(font: CreateFontInput!): FontItem
+      deleteFont(id: ID!): Success
+      deleteFonts(ids: [ID!]): Success
     }
   `
 })
