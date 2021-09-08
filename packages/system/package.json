@@ -20,6 +20,7 @@
     "apollo-datasource-mongodb": "^0.4.7",
     "apollo-server-express": "^3.3.0",
     "consola": "^2.15.3",
+    "esno": "^0.9.1",
     "execa": "^5.1.1",
     "express": "^4.17.1",
     "graphql": "^15.5.1",

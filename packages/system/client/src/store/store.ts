@@ -9,8 +9,8 @@
 import { reactive, readonly } from 'vue'
 
 const state = reactive({
-  group: [],
-  fonts: []
+  group: [] as GroupItem[],
+  fonts: [] as FontItem[]
 })
 
 const actions = {}

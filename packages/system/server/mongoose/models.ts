@@ -9,8 +9,7 @@ export const FontModel = createModel<FontItem>('fonts', {
 })
 
 export const GroupModel = createModel<FontItem>('groups', {
-  key: { type: String, required: true },
-  value: { type: String, required: true },
+  label: { type: String, required: true },
   prefix: { type: String, required: true },
   createTime: { type: Date, default: Date.now },
   updateTime: { type: Date, default: Date.now }

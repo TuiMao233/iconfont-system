@@ -1,9 +1,30 @@
 import { gql } from 'apollo-server-express'
 export const typeDefs = Object.values({
   group: gql`
-    # test foo data
+    type GroupItem {
+      id: ID!
+      label: String!
+      prefix: String!
+      createTime: Float!
+      updateTime: Float!
+    }
     type Query {
-      foo: String
+      groups: [GroupItem!]
+    }
+    input UpdateGroupInput {
+      id: ID!
+      label: String!
+      prefix: String!
+    }
+    input CreateGroupInput {
+      label: String!
+      prefix: String!
+    }
+
+    type Mutation {
+      updateGroup(id: ID!, group: UpdateGroupInput!): GroupItem
+      createGroup(group: CreateGroupInput!): GroupItem
+      deleteGroup(id: ID!): Success
     }
   `,
   fonts: gql`

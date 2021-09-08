@@ -12,5 +12,5 @@ interface GroupSources {
   createGroup: (group: GroupItem) => Promise<any>
   deleteGroup: (id: string) => Promise<any>
   /** 覆盖分组, 用于更换顺序 */
-  coverGroups: (groups: GroupItem[]) => Promise<any[]>
+  // coverGroups: (groups: GroupItem[]) => Promise<any[]>
 }

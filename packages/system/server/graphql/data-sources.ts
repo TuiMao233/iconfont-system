@@ -1,4 +1,4 @@
-import { FontModel } from '../mongoose'
+import { FontModel, GroupModel } from '../mongoose'
 import { pickBy } from 'lodash'
 // import { MongoDataSource } from 'apollo-datasource-mongodb'
 class MongoFont implements FontSources {
@@ -36,7 +36,21 @@ class MongoFont implements FontSources {
     return { message: '删除字体成功!', status: true }
   }
 }
-class MongoGroup implements GroupSources {}
+class MongoGroup implements GroupSources {
+  async getGroups() {
+    return await GroupModel.find()
+  }
+  async updateGroup(id: string, groupItem: GroupItem) {
+    return await GroupModel.updateOne({ id }, groupItem, { new: true })
+  }
+  async createGroup(groupItem: GroupItem) {
+    return await GroupModel.create(groupItem)
+  }
+  async deleteGroup(id: string) {
+    await GroupModel.deleteOne({ id })
+    return { message: '删除分组成功!', status: true }
+  }
+}
 
 export const dataSources = {
   font: new MongoFont(),
