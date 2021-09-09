@@ -9,8 +9,8 @@ async function createServer() {
   const server = new ApolloServer({ schema, dataSources: () => <any>dataSources })
   await server.start()
   server.applyMiddleware({ app })
-  await new Promise((resolve: any) => app.listen({ port: 4000 }, resolve))
-  ;(<any>consola).silent(`Server ready at http://localhost:4000${server.graphqlPath}`)
+  await new Promise((resolve: any) => app.listen({ port: 5000 }, resolve))
+  ;(<any>consola).silent(`Server ready at http://localhost:5000${server.graphqlPath}`)
   return { app, server }
 }
 

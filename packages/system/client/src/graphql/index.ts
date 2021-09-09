@@ -3,7 +3,7 @@ import { onError } from '@apollo/client/link/error'
 
 // 与 API 的 HTTP 连接
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql'
+  uri: 'http://localhost:5000/graphql'
 })
 
 // 缓存实现

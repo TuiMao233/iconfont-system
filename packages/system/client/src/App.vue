@@ -1,5 +1,5 @@
 <template>
-  <div>apdddp.vue</div>
+  <div class=""> adwad</div>
 </template>
 
 <script lang="ts" setup></script>
